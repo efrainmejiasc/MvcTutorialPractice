@@ -1,7 +1,26 @@
-﻿
+﻿@model MvcTutorialPractice.Models.LoginData
+
 @{
-    ViewBag.Title = "Init";
+    ViewBag.Title = "Login Page";
 }
 
-<h2>Init</h2>
+<h2>LOGIN PAGE</h2>
+
+<form  method="POST">
+    <div class="table">
+        <div>
+            <label for="name">UserName: </label>
+            <input type="text" name="UserName" />
+        </div>
+        <div>
+            <label for="mail">Password</label>
+            <input type="password" name="Password" />
+        </div>
+        <div class="button">
+            <button type="submit">Login</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </div>
+</form>
+
 
