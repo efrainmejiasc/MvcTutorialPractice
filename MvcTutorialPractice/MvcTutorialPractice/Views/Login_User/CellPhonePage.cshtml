@@ -1,0 +1,32 @@
+﻿@model MvcTutorialPractice.Models.ShowData
+@{
+    Layout = null;
+}
+@using MvcTutorialPractice.Models;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+</head>
+<body>
+    <div>
+        @{
+
+            ShowData Funcion = new ShowData();
+            List<ShowData.Telefono> ListaTelefono = new List<ShowData.Telefono>();
+            ListaTelefono = Funcion.ListaTelefono();}
+        <h4>Ref: @ListaTelefono[0].Id</h4>
+        <h4>Marca: @ListaTelefono[0].Marca</h4>
+        <h4>Modelo: @ListaTelefono[0].Modelo</h4><br />
+        <h4>Ref: @ListaTelefono[1].Id</h4>
+        <h4>Marca: @ListaTelefono[1].Marca</h4>
+        <h4>Modelo: @ListaTelefono[1].Modelo</h4><br />
+        <h4>Ref: @ListaTelefono[2].Id</h4>
+        <h4>Marca: @ListaTelefono[2].Marca</h4>
+        <h4>Modelo: @ListaTelefono[2].Modelo</h4>
+    </div>
+</body>
+</html>

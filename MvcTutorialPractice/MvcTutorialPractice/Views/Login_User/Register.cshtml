@@ -1,0 +1,39 @@
+﻿@model MvcTutorialPractice.Models.RegisterData
+
+@{
+    ViewBag.Title = "Register Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USER REGISTER</title>
+</head>
+<body>
+
+    <h2>REGISTER PAGE</h2>
+
+    <br />
+    <form method="POST">
+        <div class="table">
+            <div>
+                <label for="name">UserName: </label>
+                <input type="text" name="UserName" />
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="Password" />
+            </div>
+            <div>
+                <label for="password">Confirm Password: </label>
+                <input type="password" name="CPassword" />
+            </div>
+            <div class="button">
+                <button type="submit">Send</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
