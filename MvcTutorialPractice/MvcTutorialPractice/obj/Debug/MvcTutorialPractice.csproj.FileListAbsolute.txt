@@ -73,3 +73,7 @@ C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutori
 C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\obj\Debug\MvcTutorialPractice.csproj.CopyComplete
 C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\obj\Debug\MvcTutorialPractice.dll
 C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\obj\Debug\MvcTutorialPractice.pdb
+C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\bin\EntityFramework.dll
+C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\bin\EntityFramework.xml
+C:\Users\ASUS\Documents\GitHub\MvcTutorialPractice\MvcTutorialPractice\MvcTutorialPractice\bin\EntityFramework.SqlServer.xml
