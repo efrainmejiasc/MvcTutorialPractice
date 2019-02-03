@@ -7,29 +7,19 @@ using System.Web;
 
 namespace MvcTutorialPractice.Models
 {
-    public class Facturas
+    public class Usuarios
     {
         public int Id { get; set; }
-
+  
         [Column(TypeName = "VARCHAR")]
-        [StringLength(20)]
+        [StringLength(50)]
         [Required]
-        public string Numero { get; set;}
-
-        [Column(TypeName = "VARCHAR")]
-        [StringLength(500)]
-        [Required]
-        public string RazonSocial { get; set; }
+        [Index("IX_Usuarios", IsUnique = true, Order = 1)]
+        public string UserName { get; set; }
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
         [Required]
-        public string Rif { get; set; }
-
-        [Required]
-        public DateTime Fecha { get; set; }
-
-        [Required]
-        public Decimal Totalotal { get; set; }
+        public string Password { get; set; }
     }
 }

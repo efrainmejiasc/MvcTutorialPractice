@@ -17,7 +17,7 @@ namespace MvcTutorialPractice.Controllers
         }
 
         [HttpPost]
-        public ActionResult InitLogin(LoginData Usuario)
+        public ActionResult InitLogin(Usuarios Usuario)
         {
             EngineDB Funcion = new EngineDB();
             Int32 Id = Funcion.SeleccionarIdUsuario(Usuario);
