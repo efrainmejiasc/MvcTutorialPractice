@@ -5,15 +5,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-using MvcTutorialPractice.Models;
+using MvcTutorialPractice.Models.DbTable;
 
-namespace MvcTutorialPractice.Models
+namespace MvcTutorialPractice.Models.DbProcedure
 {
-    public class EngineDB
+    public class DbEngine
     {
         private static string cadenaConexion = System.Configuration.ConfigurationManager.ConnectionStrings["MvcPractice"].ToString();
 
-        public int SeleccionarIdUsuario(Usuarios Usuario)
+        public int SeleccionarIdUsuario(Usuario Usuario)
         {
             object obj = new object();
             int resultado = 0;
@@ -36,7 +36,7 @@ namespace MvcTutorialPractice.Models
             return resultado;
         }
 
-        public static  int InsertarUsuario(RegisterData Usuario)
+        public  int InsertarUsuario(RegisterData Usuario)
         {
             int resultado = new int();
             SqlConnection Conexion = new SqlConnection(cadenaConexion);
@@ -53,5 +53,6 @@ namespace MvcTutorialPractice.Models
             }
             return resultado;
         }
+
     }
 }

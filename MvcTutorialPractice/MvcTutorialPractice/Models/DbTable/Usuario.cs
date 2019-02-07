@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace MvcTutorialPractice.Models
+namespace MvcTutorialPractice.Models.DbTable
 {
-    public class Usuarios
+    [Table("Usuario")]
+    public class Usuario
     {
         public int Id { get; set; }
-  
+
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
         [Required]

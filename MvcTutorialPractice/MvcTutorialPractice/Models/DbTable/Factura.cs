@@ -4,17 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-
-namespace MvcTutorialPractice.Models
+namespace MvcTutorialPractice.Models.DbTable
 {
-    public class Facturas
+    [Table("Factura")]
+    public class Factura
     {
         public int Id { get; set; }
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(20)]
         [Required]
-        public string Numero { get; set;}
+        public string Numero { get; set; }
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(500)]
@@ -30,6 +30,8 @@ namespace MvcTutorialPractice.Models
         public DateTime Fecha { get; set; }
 
         [Required]
-        public Decimal Totalotal { get; set; }
+        public Decimal Total { get; set; }
+
+        public List<FacturaDetalle> FacturaDetalle { get; set; }
     }
 }
