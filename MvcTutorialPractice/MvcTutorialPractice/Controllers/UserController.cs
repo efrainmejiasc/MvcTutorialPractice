@@ -24,7 +24,8 @@ namespace MvcTutorialPractice.Controllers
             {
                 return View();
             }
-            return View("Factura");
+            //Redirection Action (Nombre del Metodo , Controlador)
+            return RedirectToAction("Factura", "PruebaEntity");
         }
 
         public ActionResult Register()
@@ -41,7 +42,9 @@ namespace MvcTutorialPractice.Controllers
             {
                 return View();
             }
-            return View("Login");
+            //Redirection Action (Nombre del Metodo , Controlador)
+            return RedirectToAction("Login", "User");
         }
+
     }
 }

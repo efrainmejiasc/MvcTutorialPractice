@@ -115,10 +115,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\User\Register.cshtml" />
-    <Content Include="Views\User\Factura.cshtml" />
+    <Content Include="Views\PruebaEntity\Factura.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\PruebaEntityController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="EngineProyect\Engine.cs" />
     <Compile Include="Global.asax.cs">
@@ -127,6 +128,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext\DbContext.cs" />
     <Compile Include="Models\DbProcedure\DbEngine.cs" />
+    <Compile Include="Models\DbProcedure\FacturaData.cs" />
     <Compile Include="Models\DbProcedure\RegisterData.cs" />
     <Compile Include="Models\DbTable\Factura.cs" />
     <Compile Include="Models\DbTable\FacturaDetalle.cs" />
@@ -140,6 +142,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\PruebaEntity\FacturaDetalle.cshtml" />
+    <Content Include="Views\PruebaEntity\FacturaList.cshtml" />
+    <Content Include="Views\PruebaEntity\FacturaDetalleList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -30,8 +30,8 @@ namespace MvcTutorialPractice.Models.DbTable
         public DateTime Fecha { get; set; }
 
         [Required]
-        public Decimal Total { get; set; }
+        public double Total { get; set; }
 
-        public List<FacturaDetalle> FacturaDetalle { get; set; }
+       // public List<FacturaDetalle> FacturaDetalle { get; set; }
     }
 }

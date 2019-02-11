@@ -14,19 +14,19 @@
 <form method="POST">
     <div class="table">
         <div>
-            <label for="name">UserName: </label>
-            <input type="text" name="UserName" />
+            <label for="name" class= "control-label col-md-2">UserName: </label>
+            <input type="text" name="UserName" class = "form-control"/>
         </div>
         <div>
-            <label for="password">Password: </label>
-            <input type="password" name="Password" />
+            <label for="password" class= "control-label col-md-2">Password: </label>
+            <input type="password" name="Password" class = "form-control"/>
         </div>
         <div class="button">
-            <button type="submit">Login</button>
-            <button type="reset">Cancel</button>
+            <button type="submit" class="btn btn-default" >Login</button>
+            <button type="reset" class="btn btn-default" >Cancel</button>
         </div>
     </div>
 </form>
 <br /><br />
-<div><a href="/User/Register"> No posees cuenta ? Registrate </a></div>
+<div><a href='@Url.Action("Register", "User")'> No posees cuenta ? Registrate </a></div>
 
