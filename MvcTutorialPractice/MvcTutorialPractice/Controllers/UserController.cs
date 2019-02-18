@@ -16,7 +16,7 @@ namespace MvcTutorialPractice.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Usuario Usuario)
+        public ActionResult Login(Models.DbTable.Usuario Usuario)
         {
             DbEngine Funcion = new DbEngine();
             Int32 Id = Funcion.SeleccionarIdUsuario(Usuario);

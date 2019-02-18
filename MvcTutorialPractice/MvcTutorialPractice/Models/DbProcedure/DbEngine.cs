@@ -13,7 +13,7 @@ namespace MvcTutorialPractice.Models.DbProcedure
     {
         private static string cadenaConexion = System.Configuration.ConfigurationManager.ConnectionStrings["MvcPractice"].ToString();
 
-        public int SeleccionarIdUsuario(Usuario Usuario)
+        public int SeleccionarIdUsuario(Models.DbTable.Usuario Usuario)
         {
             object obj = new object();
             int resultado = 0;

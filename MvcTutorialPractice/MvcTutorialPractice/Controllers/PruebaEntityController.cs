@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using MvcTutorialPractice.EngineProyect;
 using MvcTutorialPractice.Models.DbTable;
 using MvcTutorialPractice.Models.Context;
+using MvcTutorialPractice.Models.DbProcedure;
+
 
 namespace MvcTutorialPractice.Controllers
 {
@@ -59,6 +61,33 @@ namespace MvcTutorialPractice.Controllers
             string numero = Request["numero"];
             return View(Metodo.ObtenerTodasFacturasDetalles(numero));
         }
+
+        [HttpGet]
+        public ActionResult ExportExcel(int k = 0)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ExportExcel()
+        {
+            string data = Request.Form.ToString();
+            List<FacturaData> MyList = new List<FacturaData>();
+            if (data == "GetData=")
+            {
+                MyList = Metodo.ObtenerFacturaMasDetalle();
+                return View(MyList);
+            }
+            else if (data == "ExportData=")
+            {
+                MyList = Metodo.ObtenerFacturaMasDetalle();
+                bool r = Metodo.ExportarExcel(MyList);
+                if (r) return View(MyList);
+            }
+
+            return View();
+        }
+
 
 
     }
