@@ -7,40 +7,41 @@
 
 <h2>ExportExcel</h2>
 <br /><br />
-      <table cellpadding="2" cellspacing="2" border="1">
-          <tr>
-              <th>Numero</th>
-              <th>Razon Social</th>
-              <th>Rif</th>
-              <th>Fecha</th>
-              <th>Codigo Producto</th>
-              <th>Producto</th>
-              <th>Cantidad</th>
-              <th>Precio Unidad</th>
-              <th>SubTotal</th>
-              <th>Total</th>
-          </tr>
-        
-              @if (Model != null)
-              {
-                  foreach (var I in Model)
-                  {
-               <tr>
-                  <td>@I.Numero</td>
-                  <td>@I.RazonSocial</td>
-                  <td>@I.Rif</td>
-                  <td>@I.Fecha.ToString("dd/MM/yyyy")</td>
-                  <td>@I.CodigoProducto</td>
-                  <td>@I.Producto</td>
-                  <td>@I.Cantidad</td>
-                  <td>@I.PrecioUnidad</td>
-                  <td>@I.SubTotal</td>
-                  <td>@I.Total</td>
-              </tr>
-                  }
-              }
-      </table>
-<br /><br />
+<table cellpadding="2" cellspacing="2" border="1">
+    <tr>
+        <th>Numero</th>
+        <th>Razon Social</th>
+        <th>Rif</th>
+        <th>Fecha</th>
+        <th>Codigo Producto</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unidad</th>
+        <th>SubTotal</th>
+        <th>Total</th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var I in Model)
+        {
+            <tr>
+                <td>@I.Numero</td>
+                <td>@I.RazonSocial</td>
+                <td>@I.Rif</td>
+                <td>@I.Fecha.ToString("dd/MM/yyyy")</td>
+                <td>@I.CodigoProducto</td>
+                <td>@I.Producto</td>
+                <td>@I.Cantidad</td>
+                <td>@I.PrecioUnidad</td>
+                <td>@I.SubTotal</td>
+                <td>@I.Total</td>
+            </tr>
+        }
+    }
+</table>
+<br />@ViewBag.Message <br /><br />
+
 
 
 <div class="button">

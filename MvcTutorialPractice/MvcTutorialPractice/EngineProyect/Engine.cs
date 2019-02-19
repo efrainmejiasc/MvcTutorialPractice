@@ -103,7 +103,7 @@ namespace MvcTutorialPractice.EngineProyect
                     worksheet.Range["A" + row.ToString(), "k" + row.ToString()].Font.Size = 10;
 
                     worksheet.Cells[row, 1] = I.Id;
-                    worksheet.Cells[row, 2] = I.Numero;
+                    worksheet.Cells[row, 2] = I.Numero.ToString();
                     worksheet.Cells[row, 3] = I.RazonSocial;
                     worksheet.Cells[row, 4] = I.Rif;
                     worksheet.Cells[row, 5] = I.Fecha.ToString("dd/MM/yyyy");

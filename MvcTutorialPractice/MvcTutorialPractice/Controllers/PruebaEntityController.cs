@@ -76,18 +76,22 @@ namespace MvcTutorialPractice.Controllers
             if (data == "GetData=")
             {
                 MyList = Metodo.ObtenerFacturaMasDetalle();
+                ViewBag.Message = "Invoice List Total" + MyList.Count.ToString();
                 return View(MyList);
             }
             else if (data == "ExportData=")
             {
                 MyList = Metodo.ObtenerFacturaMasDetalle();
                 bool r = Metodo.ExportarExcel(MyList);
-                if (r) return View(MyList);
+                if (r)
+                {
+                    ViewBag.Message = "Sucessfull Export";
+                    return View(MyList);
+                }
             }
 
             return View();
         }
-
 
 
     }
