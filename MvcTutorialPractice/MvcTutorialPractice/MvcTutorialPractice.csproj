@@ -152,6 +152,7 @@
     <Content Include="Views\PruebaEntity\FacturaList.cshtml" />
     <Content Include="Views\PruebaEntity\FacturaDetalleList.cshtml" />
     <Content Include="Views\PruebaEntity\ExportExcel.cshtml" />
+    <Content Include="Views\User\PruebaGig.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

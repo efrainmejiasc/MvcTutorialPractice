@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "PruebaGig";
+}
+
+<h2>PruebaGig</h2>
+
+<div class="search_categories">
+    <div class="select">
+        <select name="Filtro" id="Filtro" style="width:100%">
+            <option value="1">Special</option>
+            <option value="2">Cloud</option>
+            <option value="3">Active</option>
+            <option value="4">No Active</option>
+        </select>
+<input type="submit" value="Filters Proyects" class="btn" />
+    </div>
+</div>
+<style type="text/css">
+    .btn {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 2px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+    }
+    .search_categories {
+        font-size: 13px;
+        padding: 10px 8px 10px 14px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        right:-20%;
+    }
+
+        .search_categories .select {
+            width:50%;
+            background:red;
+            background-position: 80% center;
+        }
+
+            .search_categories .select Filtro{
+                background: red;
+                line-height: 1;
+                border: 0;
+                padding: 0;
+                border-radius: 0;
+                width: 50%;
+                position: relative;
+                z-index: 10;
+                font-size: 1em;
+            }
+</style>
+

@@ -46,5 +46,11 @@ namespace MvcTutorialPractice.Controllers
             return RedirectToAction("Login", "User");
         }
 
+        public ActionResult PruebaGig()
+        {
+            return View();
+
+        }
+
     }
 }
