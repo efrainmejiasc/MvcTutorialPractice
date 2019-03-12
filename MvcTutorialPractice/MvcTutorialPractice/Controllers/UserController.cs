@@ -46,8 +46,30 @@ namespace MvcTutorialPractice.Controllers
             return RedirectToAction("Login", "User");
         }
 
-        public ActionResult PruebaGig()
+        public ActionResult PruebaGig( int ModuleId = 0, string page = "")
         {
+            string rango = string.Empty;
+        
+            return View();
+
+        }
+
+        [HttpPost]
+        public ActionResult PruebaGig(int id, int ModuleId = 0, string page = "")
+        {
+            string rango = string.Empty;
+            if (id >= 1 && id <= 2)
+            {
+                rango = "A";
+            }
+            else if (id >= 3 && id <= 4)
+            {
+                rango = "B";
+            }
+            else
+            {
+                rango = "X";
+            }
             return View();
 
         }

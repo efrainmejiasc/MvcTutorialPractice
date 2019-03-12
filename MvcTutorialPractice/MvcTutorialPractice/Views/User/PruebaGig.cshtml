@@ -13,7 +13,7 @@
             <option value="3">Active</option>
             <option value="4">No Active</option>
         </select>
-<input type="submit" value="Filters Proyects" class="btn" />
+        <input type="submit" value="Filters Proyects" class="btn" />
     </div>
 </div>
 <style type="text/css">
@@ -27,6 +27,7 @@
         display: inline-block;
         font-size: 12px;
     }
+
     .search_categories {
         font-size: 13px;
         padding: 10px 8px 10px 14px;
@@ -36,16 +37,16 @@
         overflow: hidden;
         position: relative;
         width: 50%;
-        right:-20%;
+        right: -20%;
     }
 
         .search_categories .select {
-            width:50%;
-            background:red;
+            width: 50%;
+            background: red;
             background-position: 80% center;
         }
 
-            .search_categories .select Filtro{
+            .search_categories .select Filtro {
                 background: red;
                 line-height: 1;
                 border: 0;
@@ -58,3 +59,33 @@
             }
 </style>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+
+<script>
+
+
+    $('#Filtro').change(function() {
+        var idx = this.selectedIndex
+        $("select#selected").prop('selectedIndex', idx); 
+        JsC(idx);
+    });
+
+
+
+    function JsC(value) {
+    $.ajax({
+    type: "POST",
+    url: "localhost:50632/User/PruebaGig",
+    data: '{Id:' + value +'}',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: OnSuccess,
+    failure: function(response) {
+    alert(response.d);
+    }
+    });
+    }
+    function OnSuccess(response) {
+    alert(response.d);
+    }
+</script>
